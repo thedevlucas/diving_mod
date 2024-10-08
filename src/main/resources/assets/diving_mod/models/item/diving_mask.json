@@ -1,0 +1,6 @@
+{
+  "parent": "diving_mod:item/diving_mask",
+  "textures": {
+    "layer0": "diving_mod:item/diving_mask"
+  }
+}

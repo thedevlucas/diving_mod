@@ -1,0 +1,8 @@
+{
+  "teleport_sound_effect": {
+    "subtitle": "sounds.template-mod.teleport_sound_effect",
+    "sounds": [
+      "template-mod:teleport_sound_effect"
+    ]
+  }
+}
