@@ -1,0 +1,7 @@
+{
+  "parent": "item/armor",
+  "textures": {
+    "layer0": "diving_mod:textures/armor/reinforced_diving_gear_layer_1.png",
+    "layer1": "diving_mod:textures/armor/reinforced_diving_gear_layer_2.png"
+  }
+}
