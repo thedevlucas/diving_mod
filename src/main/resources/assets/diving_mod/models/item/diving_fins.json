@@ -1,5 +1,5 @@
 {
-  "parent": "diving_mod:item/diving_fins",
+  "parent": "item/generated",
   "textures": {
     "layer0": "diving_mod:item/diving_fins"
   }

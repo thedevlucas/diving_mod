@@ -1,3 +1,6 @@
 {
-  "diving_mod.diving_tank": "Holaaa"
+  "item.diving_mod.diving_tank": "Tanque de oxígeno",
+  "item.diving_mod.diving_leggins": "Pantalones de buceo",
+  "item.diving_mod.diving_mask": "Mascara de buceo",
+  "item.diving_mod.diving_fins": "Aletas de buceo"
 }
