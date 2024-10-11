@@ -1,20 +1,20 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "pattern": [
-    "GGG",
-    "I I",
-    "   "
+    "###",
+    "$ $",
+    " $ "
   ],
   "key": {
-    "G": {
-      "item": "minecraft:glass"
+    "#": {
+      "item": "minecraft:glass_pane"
     },
-    "I": {
+    "$": {
       "item": "minecraft:iron_ingot"
     }
   },
   "result": {
-    "item": "mod_id:diving_mask",
-    "count": 1
+    "item": "diving_mod:diving_mask"
   }
 }

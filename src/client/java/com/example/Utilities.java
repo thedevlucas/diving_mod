@@ -16,7 +16,7 @@ public class Utilities {
     }
 
 
-    public static void addDialogue(String text) {
+    public static void addDialogue() {
         synchronized (DialogueManager.windows) {
             for (IDialogueWindow window : DialogueManager.windows) {
                 if (window instanceof DialogueWindow && !window.isDone()) {
@@ -26,7 +26,7 @@ public class Utilities {
             }
         }
 
-        DialogueManager.addDialogueWindow(new DialogueWindow(MinecraftClient.getInstance(), text, 5, 1));
+        DialogueManager.addDialogueWindow(new DialogueWindow(MinecraftClient.getInstance(), 5));
         
 
     }

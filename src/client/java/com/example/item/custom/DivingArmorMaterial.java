@@ -1,5 +1,6 @@
 package com.example.item.custom;
 
+import com.example.Diving_mod;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorItem;
@@ -7,6 +8,7 @@ import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.sound.SoundEvent;
+import net.minecraft.sound.SoundEvents;
 
 import static net.minecraft.entity.EquipmentSlot.*;
 import static net.minecraft.item.Items.CHEST;
@@ -33,7 +35,6 @@ public class DivingArmorMaterial implements ArmorMaterial {
         };
     }
 
-
     @Override
     public int getEnchantability() {
         return 0;
@@ -41,7 +42,7 @@ public class DivingArmorMaterial implements ArmorMaterial {
 
     @Override
     public SoundEvent getEquipSound() {
-        return null;
+        return SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND;
     }
 
     @Override
@@ -51,7 +52,7 @@ public class DivingArmorMaterial implements ArmorMaterial {
 
     @Override
     public String getName() {
-        return "";
+        return Diving_mod.MOD_ID + ":reinforced_diving_gear";
     }
 
     @Override
@@ -64,5 +65,4 @@ public class DivingArmorMaterial implements ArmorMaterial {
         return 0;
     }
 
-    // Otros métodos...
 }

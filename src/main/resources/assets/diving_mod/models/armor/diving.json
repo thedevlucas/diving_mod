@@ -1,7 +1,7 @@
 {
-  "parent": "item/armor",
+  "parent": "item/generated",
   "textures": {
-    "layer0": "diving_mod:textures/armor/reinforced_diving_gear_layer_1",
-    "layer1": "diving_mod:textures/armor/reinforced_diving_gear_layer_2"
+    "layer0": "diving_mod:models/armor/reinforced_diving_gear_layer_1",
+    "layer1": "diving_mod:models/armor/reinforced_diving_gear_layer_2"
   }
 }

@@ -1,19 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "pattern": [
-    "I I",
-    "L L"
+    "# #",
+    "$ $"
   ],
   "key": {
-    "I": {
+    "#": {
       "item": "minecraft:iron_ingot"
     },
-    "L": {
-      "item": "minecraft:leather_boots"
+    "$": {
+      "item": "minecraft:ink_sac"
     }
   },
   "result": {
-    "item": "mod_id:diving_fins",
-    "count": 1
+    "item": "diving_mod:diving_fins"
   }
 }
