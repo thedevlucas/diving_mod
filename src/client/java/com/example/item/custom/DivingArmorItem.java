@@ -21,9 +21,11 @@ public class DivingArmorItem extends ArmorItem {
                 if(hasFullSuitOfArmorOn(player)) {
                     StatusEffectInstance water_breathing = new StatusEffectInstance(StatusEffects.WATER_BREATHING,10, 0, false, false);
                     StatusEffectInstance water_speed = new StatusEffectInstance(StatusEffects.DOLPHINS_GRACE,10, 0, false, false);
+                    StatusEffectInstance slow_speed = new StatusEffectInstance(StatusEffects.SLOWNESS,10, 0, false, false);
 
                     player.addStatusEffect(water_breathing);
                     player.addStatusEffect(water_speed);
+                    player.addStatusEffect(slow_speed);
                 }
             }
         }
