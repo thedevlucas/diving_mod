@@ -1,0 +1,114 @@
+import java.util.ArrayList;
+
+// Interface
+interface AnimalActions {
+    void makeSound();
+    void move();
+}
+
+// Clase Super
+class Animal implements AnimalActions {
+    protected String name;
+    protected int age;
+
+    // Constructor
+    public Animal(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Método para mostrar información del animal
+    public void displayInfo() {
+        System.out.println("Animal: " + name + ", Age: " + age);
+    }
+
+    // Método sobreescrito de la interfaz
+    @Override
+    public void makeSound() {
+        System.out.println("Animal makes a sound.");
+    }
+
+    // Método sobreescrito de la interfaz
+    @Override
+    public void move() {
+        System.out.println("Animal moves.");
+    }
+
+    // Sobrecarga de método para diferentes comportamientos
+    public void eat() {
+        System.out.println("Animal is eating.");
+    }
+
+    public void eat(String food) {
+        System.out.println("Animal is eating " + food + ".");
+    }
+}
+
+// Clase Hija 1
+class Dog extends Animal {
+
+    // Constructor
+    public Dog(String name, int age) {
+        super(name, age);
+    }
+
+    // Sobreescritura de métodos
+    @Override
+    public void makeSound() {
+        System.out.println(name + " says: Woof!");
+    }
+
+    @Override
+    public void move() {
+        System.out.println(name + " is running.");
+    }
+}
+
+// Clase Hija 2
+class Cat extends Animal {
+
+    // Constructor
+    public Cat(String name, int age) {
+        super(name, age);
+    }
+
+    // Sobreescritura de métodos
+    @Override
+    public void makeSound() {
+        System.out.println(name + " says: Meow!");
+    }
+
+    @Override
+    public void move() {
+        System.out.println(name + " is sneaking.");
+    }
+}
+
+// Clase principal
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<Animal> animals = new ArrayList<>();
+
+        // Añadiendo animales a la lista
+        animals.add(new Dog("Buddy", 3));
+        animals.add(new Cat("Whiskers", 2));
+
+        // Polimorfismo - recorrer la lista y llamar a métodos sobrescritos
+        for (Animal animal : animals) {
+            animal.displayInfo();
+            animal.makeSound();
+            animal.move();
+            animal.eat(); // Llama a la versión sin argumentos
+            animal.eat("food"); // Llama a la versión con argumento
+            System.out.println();
+        }
+
+        // Manejo de excepciones
+        try {
+            // Lanzar una excepción si intentamos acceder a un índice fuera del rango
+            Animal nonExistent = animals.get(5);
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println("Error: Intentaste acceder a un índice no válido en la lista.");
+        }
+    }
+}
