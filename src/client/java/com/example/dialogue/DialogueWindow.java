@@ -1,15 +1,18 @@
 package com.example.dialogue;
 
+import com.example.Diving_mod;
 import com.example.Utilities;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.font.TextRenderer;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.util.Identifier;
 
 public class DialogueWindow implements IDialogueWindow {
     private final MinecraftClient client;
     private final int duration;
     private long lastUpdateTime;
+    private final Identifier oxigen_frame = new Identifier(Diving_mod.MOD_ID, "textures/gui/oxigen_tank_ui.png");
 
     public DialogueWindow(MinecraftClient client, int duration) {
         this.client = client;
@@ -21,15 +24,15 @@ public class DialogueWindow implements IDialogueWindow {
     public void render(DrawContext context, float tickDelta) {
         int screenWidth = client.getWindow().getScaledWidth();
         int screenHeight = client.getWindow().getScaledHeight();
-        TextRenderer textRenderer = client.textRenderer;
+
 
         int height = 240;
         int width = 450;
         int x = (screenWidth - width) / 2;
         int y = screenHeight - height - 60;
 
-        context.drawText(textRenderer, "O₂", x + 65, y + height - textRenderer.fontHeight * 2, Utilities.rgba(255, 255, 255, 1f), true);
-        context.drawText(textRenderer, "100%", x + 60, y + height - textRenderer.fontHeight, Utilities.rgba(255, 255, 255, 1f), true);
+
+        context.drawTexture(oxigen_frame, x + 60, 50, 0, 0, 80, 15, 80, 15);
 
     }
 
