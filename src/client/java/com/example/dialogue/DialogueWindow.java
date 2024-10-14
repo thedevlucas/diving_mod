@@ -26,13 +26,13 @@ public class DialogueWindow implements IDialogueWindow {
         int screenHeight = client.getWindow().getScaledHeight();
 
 
-        int height = 240;
-        int width = 450;
+        int height = 50;
+        int width = 20;
         int x = (screenWidth - width) / 2;
         int y = screenHeight - height - 60;
 
 
-        context.drawTexture(oxigen_frame, x + 60, 50, 0, 0, 80, 15, 80, 15);
+        context.drawTexture(oxigen_frame, 10, screenHeight - height - 5, 0, 0, width, height, width, height);
 
     }
 
