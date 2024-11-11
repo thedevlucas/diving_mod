@@ -64,7 +64,7 @@ public class Diving_modClient implements ClientModInitializer {
 
 			String query = "UPDATE players SET current_oxygen = ? WHERE playername = ?";
 			try (Connection conn = MySQLConnection.getConnection();
-				PreparedStatement stmt = conn.prepareStatement(query)) {
+				 PreparedStatement stmt = conn.prepareStatement(query)) {
 				stmt.setInt(1, 0); //cambiar por el valor actual de oxigeno
 				stmt.setString(2, playername);
 				stmt.executeUpdate();
