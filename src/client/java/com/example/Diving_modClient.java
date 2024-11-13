@@ -30,7 +30,7 @@ public class Diving_modClient implements ClientModInitializer {
 		HudRenderCallback.EVENT.register(DialogueManager::renderAll);
 
 		MinecraftClient instance = MinecraftClient.getInstance();
-		int DURATION = 5;
+		int DURATION = 240;
 
 		ClientPlayConnectionEvents.JOIN.register((handler, sender, client) -> {
 			String playername = instance.getSession().getUsername();
@@ -86,7 +86,6 @@ public class Diving_modClient implements ClientModInitializer {
 
 				if (first.get())
 				{
-					Diving_mod.LOGGER.info("CACA " + String.valueOf(globalOxigen.get()));
 					oxygenHelmet.setDamage(globalOxigen.get());
 					first.set(false);
 				}
