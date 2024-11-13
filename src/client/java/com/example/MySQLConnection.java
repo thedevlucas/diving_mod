@@ -20,29 +20,4 @@ public class MySQLConnection {
         }
         return connection;
     }
-
-    public static void closeConnection() {
-        try {
-            if (connection != null && !connection.isClosed()) {
-                connection.close();
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public static void insertData(String playername, String UUID, int current_oxygen) {
-        String query = "INSERT INTO players (playername, UUID, current_oxygen) VALUES (?, ?, ?)";
-        Diving_mod.LOGGER.info(playername + " called");
-        try (Connection conn = getConnection();
-             PreparedStatement stmt = conn.prepareStatement(query)) {
-            stmt.setString(1, playername);
-            stmt.setString(2, UUID);
-            stmt.setInt(3, current_oxygen);
-            stmt.executeUpdate();
-            Diving_mod.LOGGER.info(playername + " inserted into database");
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
 }
