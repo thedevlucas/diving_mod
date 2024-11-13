@@ -3,7 +3,6 @@ package com.example;
 import com.example.dialogue.DialogueManager;
 import com.example.dialogue.DialogueWindow;
 import com.example.item.ModItems;
-import com.example.sound.ModSounds;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents;
@@ -25,7 +24,6 @@ public class Diving_modClient implements ClientModInitializer {
 		AtomicInteger globalOxigen = new AtomicInteger();
 		AtomicBoolean first = new AtomicBoolean(true);
 
-		ModSounds.register();
 		ModItems.registerModItems();
 		HudRenderCallback.EVENT.register(DialogueManager::renderAll);
 
